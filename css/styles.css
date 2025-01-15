@@ -674,9 +674,7 @@
 
             @media (min-width: 1360px) {
                 flex-direction: row;
-                flex-wrap: wrap;
-                row-gap: 84px;
-                column-gap: 24px;
+                gap: 24px;
                 padding-left: 0;
             }
 
@@ -685,12 +683,16 @@
                 flex-direction: column;
                 gap: 24px;
 
+                p {
+                    letter-spacing: normal;
+                }
+
                 @media (min-width: 760px) {
                     gap: 37px;
                 }
 
                 @media (min-width: 1360px) {
-                    flex: 1 1 calc(50% - 12px);
+                    flex: 1 1 calc((100% - (2 * 24px)) / 3);
                 }
             }
         }
@@ -907,17 +909,19 @@
                     flex: 1 1 calc((100% - (2 * 24px)) / 3);
                 }
 
-               .google-tv-wrap {
+               .android-tv-wrap {
                     padding: 7px 0;
-                    max-width: 178px;
+                    max-width: 135px;
 
                     @media (min-width: 760px) {
                         padding: 12px 0;
-                        max-width: 307px;
+                        max-width: 233px;
                     }
 
                     @media (min-width: 760px) {
                         height: 81px;
+                        display: flex;
+                        align-items: center;
                     }
                }
 
@@ -1285,13 +1289,20 @@
             }
 
             .remote-title-mob {
-                position: absolute;
-                right: 0;
-                top: 0;
                 text-align: right;
+                letter-spacing: -0.05em;
 
-                @media (max-width: 370px) {
-                    max-width: 150px;
+                @media (max-width: 375px) {
+                    font-size: 26px;
+                }
+
+                @media (min-width: 460px) {
+                    letter-spacing: 0.01em;
+
+                }
+
+                @media (min-width: 760px) {
+                    text-align: left;
                 }
 
                 @media (min-width: 1360px) {
@@ -1333,8 +1344,20 @@
                     padding-left: 11px;
                     margin-bottom: 54px;
 
+                    @media (min-width: 760px) {
+                        margin-top: -250px;
+                        padding-left: 40%;
+                    }
+
+                    @media (min-width: 760px) {
+                        margin-top: -250px;
+                        padding-left: 300px;
+                    }
+
                     @media (min-width: 1360px) {
                         margin-bottom: auto;
+                        padding-left: 11px;
+                        margin-top: 0px;
                     }
 
                     .remote-info-item {
