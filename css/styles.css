@@ -9,6 +9,7 @@
     font-weight: 400;
     font-size: 18px;
     line-height: 1.4;
+    text-align: left;
     color: var(--black-color);
     letter-spacing: 0.01em;
     background-color: #fff;
@@ -32,6 +33,7 @@
     h5,
     h6 {
         margin: 0;
+        color: var(--black-color);
     }
 
     ul,
@@ -244,7 +246,7 @@
                 font-weight: 600;
                 font-size: 30px;
                 line-height: 1.1;
-                letter-spacing: 0.01em;
+                letter-spacing: normal;
                 text-transform: uppercase;
                 text-align: center;
                 background: linear-gradient(90deg, #0577e6 0%, #23e7f1 83.5%);
@@ -1734,6 +1736,8 @@
     }
 
     .twentytwenty-left-arrow {
+        display: block;
+        transform: translate(0, 0);
         border: none;
         width: 8px;
         height: 16px;
@@ -1746,6 +1750,8 @@
     }
 
     .twentytwenty-right-arrow {
+        display: block;
+        transform: translate(0, 0);
         border: none;
         width: 8px;
         height: 16px;
